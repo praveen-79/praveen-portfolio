@@ -209,8 +209,8 @@ Key focuses include Generative AI, Retrieval-Augmented Generation (RAG), Neural 
 • Current CGPA: 7.11
 
 Relevant Coursework & Certifications:
-• AI Foundation and Advanced (Indian School of Business - ISB)
-• Machine Learning Foundation (ISB)
+• AI Foundation and Advanced (Infosys Springboard)
+• Machine Learning Foundation (Infosys Springboard)
 • Web Development (Internshala)
 • Machine Learning (Udemy)`;
       this.streamOutput('ACADEMIC DOSSIER', 'Source: Academic Records', eduText);
