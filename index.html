@@ -3,804 +3,983 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Pidamarthi Praveen Kumar — AI & Machine Learning Portfolio">
-  <title>Praveen Kumar | AI & ML Engineer</title>
+  <meta name="description" content="Pidamarthi Praveen Kumar — Futuristic 3D Portfolio. AI & Machine Learning Engineer specializing in Generative AI, RAG Architectures, and Deep Learning Neural Systems.">
+  <meta name="keywords" content="Praveen Kumar, AI Engineer, Machine Learning, Generative AI, RAG Chatbot, Qwen 2.5, EEG-to-Text, PyTorch, Deep Learning, CBIT">
+  <meta name="author" content="Pidamarthi Praveen Kumar">
+  <title>Praveen Kumar | AI & ML Engineer | 3D Neural Portfolio</title>
 
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-
+  <!-- Core Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <div class="noise"></div>
-  <div class="orb orb-one"></div>
-  <div class="orb orb-two"></div>
-  <div class="grid-bg"></div>
+  <!-- Custom Cybernetic Cursor -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
 
-  <!-- NAVBAR -->
+  <!-- Scanline & Ambient Cyber Overlay -->
+  <div class="scanlines"></div>
+
+  <!-- WebGL 3D Three.js Background Canvas Container -->
+  <div id="canvas-container"></div>
+
+  <!-- ==========================================================================
+       TOP NAVIGATION BAR
+       ========================================================================== -->
   <header class="navbar">
+    <div class="container nav-container">
+      
+      <!-- Brand Logo -->
+      <a href="#home" class="logo nav-link">
+        <span class="logo-bracket">&lt;</span><span class="logo-name">PK</span><span class="logo-slash">/&gt;</span>
+      </a>
 
-    <a href="#home" class="logo">
-      <span>&lt;</span>PK<span>/&gt;</span>
-    </a>
+      <!-- Live System Status Badge -->
+      <div class="system-status">
+        <span class="status-dot"></span>
+        <span>AVAILABLE FOR OPPORTUNITIES // HYDERABAD, IN</span>
+      </div>
 
-    <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">
-      ☰
-    </button>
+      <!-- Navigation Links -->
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#terminal" class="nav-link">AI Terminal</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#contact" class="nav-link">Contact</a>
 
-    <nav id="navLinks">
-      <a href="#home" class="active">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
-    </nav>
+        <!-- CTA Direct Dispatch -->
+        <a href="#contact" class="btn primary btn-sm nav-link">
+          Transmit Message ↗
+        </a>
+      </nav>
 
+      <!-- Mobile Hamburger Button -->
+      <button class="menu-toggle-btn" id="menu-btn" aria-label="Toggle Navigation Menu">
+        ☰
+      </button>
+
+    </div>
   </header>
 
-
+  <!-- ==========================================================================
+       MAIN CONTENT
+       ========================================================================== -->
   <main>
 
-    <!-- ================= HOME ================= -->
-
+    <!-- ================= 00. HERO SECTION ================= -->
     <section id="home" class="hero section">
-
-      <div class="hero-content reveal">
-
-        <div class="status">
-          <span></span>
-          AI & MACHINE LEARNING
-        </div>
-
-        <h1>
-          Building <span>intelligent</span><br>
-          systems that matter.
-        </h1>
-
-        <p class="hero-text">
-          I'm <strong>Praveen Kumar</strong>, an Artificial Intelligence and
-          Machine Learning graduate who enjoys turning data, models and ideas
-          into practical applications.
-        </p>
-
-        <div class="hero-buttons">
-
-          <a href="#projects" class="btn primary">
-            Explore My Work <b>↗</b>
-          </a>
-
-          <a
-            href="Praveen_Kumar_Resume.docx"
-            download
-            class="btn glass"
-          >
-            Download Resume ↓
-          </a>
-
-        </div>
-
-
-        <!-- SOCIAL LINKS -->
-
-        <div class="social-row">
-
-          <a
-            href="https://github.com/praveen-79"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub ↗
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/praveen-kumar-pidamarthi-781b52299/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn ↗
-          </a>
-
-          <a
-            href="mailto:praveenkumarpidamarthi01@gmail.com?subject=Portfolio%20Contact"
-          >
-            Email ↗
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <!-- PROFILE PHOTO -->
-
-      <div class="hero-visual reveal">
-
-        <div class="photo-ring">
-
-          <div class="ring r1"></div>
-          <div class="ring r2"></div>
-          <div class="ring r3"></div>
-
-          <div class="photo-glow"></div>
-
-          <img
-            src="profile.jpeg"
-            alt="Praveen Kumar"
-            class="profile-photo"
-          >
-
-          <div class="floating-chip chip-one">
-            PYTHON
+      <div class="container hero-grid">
+        
+        <!-- Left Hero Content -->
+        <div class="hero-content">
+          
+          <div class="hero-status-pill">
+            <span class="status-dot"></span>
+            <span>B.TECH AI &amp; ML // CHAITANYA BHARATHI INSTITUTE OF TECHNOLOGY</span>
           </div>
 
-          <div class="floating-chip chip-two">
-            PYTORCH
-          </div>
+          <h1 class="hero-title">
+            Architecting <span class="highlight">Intelligent</span> Systems, Neural Models &amp; <span class="neural">Generative AI</span>.
+          </h1>
 
-          <div class="floating-chip chip-three">
-            AI / ML
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= ABOUT ================= -->
-
-    <section id="about" class="section">
-
-      <div class="section-title reveal">
-
-        <div>
-
-          <small>01 / ABOUT</small>
-
-          <h2>
-            Who <span>I am.</span>
-          </h2>
-
-        </div>
-
-        <p>
-          Recently graduated. Ready to build.
-        </p>
-
-      </div>
-
-
-      <div class="about-grid">
-
-        <div class="about-main glass-card reveal">
-
-          <div class="mini-label">
-            PROFILE
-          </div>
-
-          <p class="big-copy">
-
-            I'm a recent B.E. graduate in
-            <span>Artificial Intelligence and Machine Learning</span>
-            from Chaitanya Bharathi Institute of Technology (CBIT).
-
+          <p class="hero-subtitle">
+            I'm <strong>Pidamarthi Praveen Kumar</strong>, an Artificial Intelligence &amp; Machine Learning engineer passionate about turning advanced neural architectures, RAG pipelines, and concurrent systems into high-impact applications.
           </p>
 
-          <p class="muted">
-
-            I'm passionate about building practical AI and machine learning
-            solutions, with hands-on experience across deep learning,
-            computer vision, EEG signal processing, and web application
-            development. I enjoy taking an idea from data preprocessing
-            and model development to evaluation and deployment, and I'm
-            excited to begin my professional journey in AI and Machine
-            Learning.
-
-          </p>
-
-        </div>
-
-
-        <div class="about-stats">
-
-          <div class="stat glass-card reveal">
-            <strong>3</strong>
-            <span>Featured Projects</span>
+          <!-- Action CTAs -->
+          <div class="hero-actions">
+            <a href="#projects" class="btn primary nav-link">
+              Explore Projects <b>↗</b>
+            </a>
+            <a href="Praveen_Kumar_Resume.pdf" download="Praveen_Kumar_Resume.pdf" class="btn glass" target="_blank" rel="noopener noreferrer">
+              Download Resume <b>↓</b>
+            </a>
+            <a href="#terminal" class="btn glass nav-link">
+              Launch AI Terminal <b>⌨</b>
+            </a>
+            <a href="https://github.com/praveen-79" target="_blank" rel="noopener noreferrer" class="btn glass">
+              GitHub Profile <b>↗</b>
+            </a>
           </div>
 
-          <div class="stat glass-card reveal">
-            <strong>7.11</strong>
-            <span>CGPA</span>
-          </div>
-
-          <div class="stat glass-card reveal">
-            <strong>AI/ML</strong>
-            <span>Primary Focus</span>
-          </div>
-
-          <div class="stat glass-card reveal">
-            <strong>Python</strong>
-            <span>Core Language</span>
+          <!-- Social Matrix -->
+          <div class="social-links">
+            <a href="https://github.com/praveen-79" target="_blank" rel="noopener noreferrer" class="social-btn">
+              <span>§</span> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/praveen-kumar-pidamarthi-781b52299/" target="_blank" rel="noopener noreferrer" class="social-btn">
+              <span>in</span> LinkedIn
+            </a>
+            <a href="mailto:praveenkumarpidamarthi01@gmail.com" class="social-btn copy-btn" data-copy="praveenkumarpidamarthi01@gmail.com" title="Click to copy email">
+              <span>✉</span> praveenkumarpidamarthi01@gmail.com
+            </a>
+            <button class="social-btn copy-btn" data-copy="+918317668826" title="Click to copy phone">
+              <span>📞</span> +91 8317668826
+            </button>
           </div>
 
         </div>
 
-      </div>
-
-    </section>
-
-
-    <!-- ================= SKILLS ================= -->
-
-    <section id="skills" class="section">
-
-      <div class="section-title reveal">
-
-        <div>
-
-          <small>02 / SKILLS</small>
-
-          <h2>
-            My <span>toolbox.</span>
-          </h2>
-
-        </div>
-
-        <p>
-          Technologies I use to build things.
-        </p>
-
-      </div>
-
-
-      <div class="skills-grid">
-
-
-        <article class="skill-card glass-card reveal">
-
-          <div class="skill-top">
-            <span>01</span>
-            <i>⌘</i>
-          </div>
-
-          <h3>
-            Programming
-          </h3>
-
-          <p>
-            Languages and core computer science concepts.
-          </p>
-
-          <div class="tags">
-
-            <span>Python</span>
-            <span>Data Structures</span>
-            <span>Algorithms</span>
-            <span>OOP</span>
-
-          </div>
-
-        </article>
-
-
-
-        <article class="skill-card glass-card reveal">
-
-          <div class="skill-top">
-            <span>02</span>
-            <i>◈</i>
-          </div>
-
-          <h3>
-            AI / ML
-          </h3>
-
-          <p>
-            Libraries used for machine learning and deep learning.
-          </p>
-
-          <div class="tags">
-
-            <span>PyTorch</span>
-            <span>TensorFlow</span>
-            <span>Keras</span>
-            <span>Scikit-learn</span>
-            <span>NumPy</span>
-            <span>Pandas</span>
-            <span>OpenCV</span>
-
-          </div>
-
-        </article>
-
-
-
-        <article class="skill-card glass-card reveal">
-
-          <div class="skill-top">
-            <span>03</span>
-            <i>◉</i>
-          </div>
-
-          <h3>
-            Development
-          </h3>
-
-          <p>
-            Frameworks for building web applications.
-          </p>
-
-          <div class="tags">
-
-            <span>Flask</span>
-            <span>React JS</span>
-            <span>Express JS</span>
-
-          </div>
-
-        </article>
-
-
-
-        <article class="skill-card glass-card reveal">
-
-          <div class="skill-top">
-            <span>04</span>
-            <i>▣</i>
-          </div>
-
-          <h3>
-            Tools & Data
-          </h3>
-
-          <p>
-            Development tools and database technologies.
-          </p>
-
-          <div class="tags">
-
-            <span>Git/GitHub</span>
-            <span>VS Code</span>
-            <span>SQL</span>
-            <span>SQLite</span>
-            <span>Matplotlib</span>
-
-          </div>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= PROJECTS ================= -->
-
-    <section id="projects" class="section">
-
-      <div class="section-title reveal">
-
-        <div>
-
-          <small>03 / PROJECTS</small>
-
-          <h2>
-            Things I've <span>built.</span>
-          </h2>
-
-        </div>
-
-        <p>
-          Selected work from my AI/ML journey.
-        </p>
-
-      </div>
-
-
-      <div class="projects">
-
-
-        <!-- PROJECT 1 -->
-
-        <article class="project featured-project glass-card reveal">
-
-          <div class="project-bg-number">
-            01
-          </div>
-
-          <div class="project-info">
-
-            <div class="project-label">
-              DEEP LEARNING / EEG
+        <!-- Right Hero Visual: Minimalist Slate Profile Card -->
+        <div class="hero-visual-wrapper">
+          <div class="hologram-stage tilt-card" id="profile-hologram">
+            
+            <!-- Clean Profile Photo Card -->
+            <div class="photo-card">
+              <img src="assets/profile.jpg" alt="Pidamarthi Praveen Kumar" class="profile-img">
+              <div class="photo-hologram-sweep"></div>
             </div>
 
-            <h3>
-              EEG-to-Text<br>
-              Conversion System
-            </h3>
+            <!-- Floating Tech Badges -->
+            <div class="floating-chip chip-1">
+              <span>⚡</span> Qwen 2.5 Coder &amp; RAG
+            </div>
+            <div class="floating-chip chip-2">
+              <span>🧠</span> CNN-BiLSTM Neuro Engine
+            </div>
+            <div class="floating-chip chip-3">
+              <span>🎯</span> CBIT AIML // CGPA: 7.11
+            </div>
 
-            <p>
+          </div>
+        </div>
 
-              An end-to-end deep learning pipeline that converts raw EEG
-              signals into text output using a hybrid CNN-BiLSTM architecture.
+      </div>
+    </section>
 
+    <!-- ================= 01. ABOUT SECTION ================= -->
+    <section id="about" class="section">
+      <div class="container">
+        
+        <span class="section-tag">// 01. PROFESSIONAL PROFILE</span>
+        <h2 class="section-title">Bridging Research with <span>Deployable AI</span></h2>
+        <p class="section-desc">
+          Specializing in end-to-end Machine Learning pipelines, Generative AI models with citation grounding, and high-concurrency client-server applications.
+        </p>
+
+        <div class="about-grid">
+          
+          <div class="about-intro-card tilt-card">
+            <p class="about-bio">
+              I hold a <strong>B.Tech in Artificial Intelligence &amp; Machine Learning</strong> from <strong>Chaitanya Bharathi Institute of Technology (CBIT)</strong> (Nov 2022 – Aug 2026). My engineering work centers on building reliable intelligent systems: from crafting <strong>Retrieval-Augmented Generation (RAG)</strong> engines powered by <strong>Qwen 2.5 Coder</strong> and <strong>SentenceTransformers</strong>, to designing hybrid <strong>CNN-BiLSTM neural architectures</strong> that decode raw human EEG brainwaves into textual syntax.
+            </p>
+            <p class="about-bio">
+              Beyond model training, I believe an AI system is only as good as its deployment. I engineer the full stack: concurrent socket programming, multithreaded servers, Flask REST APIs, and responsive interactive web interfaces.
             </p>
 
-            <ul>
+            <!-- Quick Specification Matrix -->
+            <div class="spec-matrix">
+              <div class="spec-item">
+                <div class="spec-label">Education</div>
+                <div class="spec-value">B.Tech AI &amp; ML</div>
+              </div>
+              <div class="spec-item">
+                <div class="spec-label">Institution</div>
+                <div class="spec-value">CBIT, Hyderabad</div>
+              </div>
+              <div class="spec-item">
+                <div class="spec-label">Academic Score</div>
+                <div class="spec-value">CGPA 7.11</div>
+              </div>
+              <div class="spec-item">
+                <div class="spec-label">Primary Languages</div>
+                <div class="spec-value">Python, SQL, JS</div>
+              </div>
+            </div>
+          </div>
 
-              <li>
-                Spatial + temporal feature extraction
-              </li>
+          <!-- 3 Architectural Pillars -->
+          <div class="pillars-grid">
+            
+            <div class="pillar-card tilt-card">
+              <div class="pillar-icon">⚡</div>
+              <h3 class="pillar-title">Generative AI &amp; RAG</h3>
+              <p class="pillar-desc">
+                Architecting zero-hallucination pipelines using LLMs (Qwen 2.5 Coder 7B), dense vector search via SentenceTransformers, and real-time citation streaming.
+              </p>
+            </div>
 
-              <li>
-                EEG filtering, normalization and segmentation
-              </li>
+            <div class="pillar-card tilt-card">
+              <div class="pillar-icon">🧠</div>
+              <h3 class="pillar-title">Deep Learning &amp; Neuro</h3>
+              <p class="pillar-desc">
+                Pioneering spatial-temporal modeling with CNN-BiLSTM networks for complex multi-channel signals such as EEG brain-to-text decoding and computer vision.
+              </p>
+            </div>
 
-              <li>
-                Sequence modeling for textual predictions
-              </li>
-
-              <li>
-                BLEU score and loss-curve evaluation
-              </li>
-
-            </ul>
-
-            <div class="project-tags">
-
-              <span>Python</span>
-              <span>PyTorch</span>
-              <span>TensorFlow</span>
-              <span>SQL</span>
-
+            <div class="pillar-card tilt-card">
+              <div class="pillar-icon">🌐</div>
+              <h3 class="pillar-title">Concurrent Systems &amp; Web</h3>
+              <p class="pillar-desc">
+                Building resilient client-server architectures with Python sockets, thread pools, Flask REST APIs, SQLite databases, and responsive modern user interfaces.
+              </p>
             </div>
 
           </div>
 
-
-          <div class="project-visual eeg-visual">
-
-            <div class="signal-line"></div>
-
-            <div class="signal-label">
-              NEURAL SIGNAL
-            </div>
-
-            <div class="signal-bars">
-
-              <i></i>
-              <i></i>
-              <i></i>
-              <i></i>
-              <i></i>
-              <i></i>
-              <i></i>
-              <i></i>
-
-            </div>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- PROJECT 2 -->
-
-        <article class="project glass-card reveal">
-
-          <div class="project-number">
-            02
-          </div>
-
-          <div class="project-label">
-            COMPUTER VISION / FLASK
-          </div>
-
-          <h3>
-            Deepfake Detection<br>
-            Web Application
-          </h3>
-
-          <p>
-
-            Automated Real vs. Fake media detection integrated into a
-            Flask-based social media application.
-
-          </p>
-
-          <ul>
-
-            <li>
-              Frame extraction and image normalization
-            </li>
-
-            <li>
-              MesoNet, XceptionNet and Vision Transformer features
-            </li>
-
-            <li>
-              Random Forest classification
-            </li>
-
-            <li>
-              Automated content moderation
-            </li>
-
-          </ul>
-
-          <div class="project-tags">
-
-            <span>Python</span>
-            <span>TensorFlow</span>
-            <span>OpenCV</span>
-            <span>Flask</span>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- PROJECT 3 -->
-
-        <article class="project glass-card reveal">
-
-          <div class="project-number">
-            03
-          </div>
-
-          <div class="project-label">
-            FULL STACK / E-COMMERCE
-          </div>
-
-          <h3>
-            Online Bookshop<br>
-            Application
-          </h3>
-
-          <p>
-
-            A web-based shopping application with authentication,
-            cart, instant search, checkout and order history.
-
-          </p>
-
-          <ul>
-
-            <li>
-              User authentication and profile dashboard
-            </li>
-
-            <li>
-              Real-time shopping cart
-            </li>
-
-            <li>
-              AJAX-powered book search
-            </li>
-
-            <li>
-              Checkout and order history
-            </li>
-
-          </ul>
-
-          <div class="project-tags">
-
-            <span>Python</span>
-            <span>Flask</span>
-            <span>Jinja2</span>
-            <span>SQLite</span>
-
-          </div>
-
-        </article>
+        </div>
 
       </div>
-
     </section>
 
+    <!-- ================= 02. TECHNICAL SKILLS ================= -->
+    <section id="skills" class="section">
+      <div class="container">
+        
+        <span class="section-tag">// 02. TECH MATRIX &amp; STACK</span>
+        <h2 class="section-title">Core Competencies &amp; <span>Technologies</span></h2>
+        <p class="section-desc">
+          Categorized technical skills covering the complete lifecycle from algorithmic theory to production deployment.
+        </p>
 
-    <!-- ================= EDUCATION ================= -->
+        <div class="skills-grid">
+          
+          <!-- AI & Generative AI -->
+          <div class="skill-category-card tilt-card">
+            <div class="skill-category-header">
+              <span class="skill-category-icon">⚡</span>
+              <h3 class="skill-category-title">AI &amp; Generative AI</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag featured">LLMs &amp; Qwen 2.5</span>
+              <span class="skill-tag featured">Retrieval-Augmented Generation (RAG)</span>
+              <span class="skill-tag">Prompt Engineering</span>
+              <span class="skill-tag">Natural Language Processing (NLP)</span>
+              <span class="skill-tag">SentenceTransformers</span>
+              <span class="skill-tag">Vector Embeddings</span>
+              <span class="skill-tag">Cosine Similarity Search</span>
+              <span class="skill-tag">Token Streaming</span>
+            </div>
+          </div>
 
+          <!-- Machine Learning & Deep Learning -->
+          <div class="skill-category-card tilt-card">
+            <div class="skill-category-header">
+              <span class="skill-category-icon">🧠</span>
+              <h3 class="skill-category-title">Deep Learning &amp; Neural Nets</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag featured">PyTorch</span>
+              <span class="skill-tag featured">TensorFlow &amp; Keras</span>
+              <span class="skill-tag">CNN Architectures</span>
+              <span class="skill-tag">Bidirectional LSTM (BiLSTM)</span>
+              <span class="skill-tag">Sequence Modeling</span>
+              <span class="skill-tag">Model Evaluation &amp; BLEU</span>
+              <span class="skill-tag">Scikit-learn</span>
+              <span class="skill-tag">Signal Preprocessing</span>
+            </div>
+          </div>
+
+          <!-- Frameworks & Data Libraries -->
+          <div class="skill-category-card tilt-card">
+            <div class="skill-category-header">
+              <span class="skill-category-icon">📦</span>
+              <h3 class="skill-category-title">Frameworks &amp; Scientific Computing</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag featured">Flask</span>
+              <span class="skill-tag">NumPy</span>
+              <span class="skill-tag">Pandas</span>
+              <span class="skill-tag">OpenCV (cv2)</span>
+              <span class="skill-tag">Matplotlib</span>
+              <span class="skill-tag">Tkinter GUI</span>
+              <span class="skill-tag">Threading</span>
+            </div>
+          </div>
+
+          <!-- Web Development & Databases -->
+          <div class="skill-category-card tilt-card">
+            <div class="skill-category-header">
+              <span class="skill-category-icon">💻</span>
+              <h3 class="skill-category-title">Web, Backend &amp; Architecture</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">HTML5 &amp; CSS3</span>
+              <span class="skill-tag">Modern JavaScript (ES6+)</span>
+              <span class="skill-tag">React JS</span>
+              <span class="skill-tag">REST APIs</span>
+              <span class="skill-tag featured">Socket Programming (TCP/IP)</span>
+              <span class="skill-tag">Client-Server Architecture</span>
+              <span class="skill-tag">SQLite</span>
+              <span class="skill-tag">SQL</span>
+            </div>
+          </div>
+
+          <!-- Core CS & Engineering Tools -->
+          <div class="skill-category-card tilt-card">
+            <div class="skill-category-header">
+              <span class="skill-category-icon">⚙️</span>
+              <h3 class="skill-category-title">Core CS Fundamentals &amp; Tools</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Data Structures &amp; Algorithms</span>
+              <span class="skill-tag">Object-Oriented Programming (OOP)</span>
+              <span class="skill-tag">Computer Networks</span>
+              <span class="skill-tag">Git &amp; GitHub</span>
+              <span class="skill-tag">VS Code</span>
+              <span class="skill-tag">Google Colab</span>
+            </div>
+          </div>
+
+          <!-- Languages Matrix -->
+          <div class="skill-category-card tilt-card">
+            <div class="skill-category-header">
+              <span class="skill-category-icon">🔤</span>
+              <h3 class="skill-category-title">Programming Languages</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag featured">Python (Advanced)</span>
+              <span class="skill-tag">SQL</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">HTML</span>
+              <span class="skill-tag">CSS</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 03. PROJECTS ================= -->
+    <section id="projects" class="section">
+      <div class="container">
+        
+        <span class="section-tag">// 03. FEATURED SYSTEMS</span>
+        <h2 class="section-title">Production &amp; <span>Research Projects</span></h2>
+        <p class="section-desc">
+          Interactive systems showcasing the updated engineering projects from my latest resume. Click on blueprints to inspect architectures.
+        </p>
+
+        <!-- Project Filtering Tabs -->
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">ALL SYSTEMS [4]</button>
+          <button class="filter-btn" data-filter="genai">GEN AI &amp; RAG</button>
+          <button class="filter-btn" data-filter="neuro">DEEP LEARNING &amp; BCI</button>
+          <button class="filter-btn" data-filter="realtime">REAL-TIME &amp; SOCKETS</button>
+        </div>
+
+        <div class="projects-grid">
+          
+          <!-- PROJECT 1: Praveen Coding Asst & RAG Chatbot (FLAGSHIP) -->
+          <div class="project-card tilt-card featured-wide" data-category="genai">
+            <div>
+              <div class="project-top">
+                <span class="project-badge">FLAGSHIP // GEN AI &amp; RAG</span>
+                <div class="project-links-top">
+                  <a href="https://github.com/praveen-79" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="View Source on GitHub">
+                    GitHub ↗
+                  </a>
+                </div>
+              </div>
+
+              <h3 class="project-title">Praveen Coding Asst &amp; RAG Chatbot</h3>
+              <div class="project-category">Python • Flask • Qwen 2.5 Coder 7B • SentenceTransformers • RAG</div>
+
+              <ul class="project-bullets">
+                <li>Built an AI-powered coding assistant capable of explaining Python, SQL, DSA, algorithms, and AI/ML concepts.</li>
+                <li>Integrated <strong>Qwen 2.5 Coder 7B</strong> as the underlying large language model for coding-focused responses.</li>
+                <li>Implemented PDF-based <strong>Retrieval-Augmented Generation (RAG)</strong> using SentenceTransformers embeddings and cosine similarity.</li>
+                <li>Added document retrieval with cited source pages and real-time token streaming for interactive responses.</li>
+                <li>Developed a responsive web interface using Flask, HTML, CSS, JavaScript, and Markdown rendering.</li>
+              </ul>
+
+              <div class="project-tags">
+                <span class="project-tag">Qwen 2.5 Coder 7B</span>
+                <span class="project-tag">SentenceTransformers</span>
+                <span class="project-tag">Vector Search</span>
+                <span class="project-tag">Cosine Similarity</span>
+                <span class="project-tag">Cited Sources</span>
+                <span class="project-tag">Flask SSE</span>
+              </div>
+
+              <!-- Tap to Unfold Structure Trigger -->
+              <div class="card-unfold-trigger">
+                <span class="expand-text">Tap to Unfold System Architecture</span>
+                <span class="expand-icon">+</span>
+              </div>
+
+              <!-- Unfolded Architecture Drawer -->
+              <div class="card-unfolded-drawer">
+                <div class="unfold-inner">
+                  <div class="unfold-subtitle">Architecture Pipeline &amp; Data Flow</div>
+                  <div class="unfold-step-list">
+                    <div class="unfold-step">
+                      <div class="unfold-step-num">01. INGESTION &amp; CHUNKING</div>
+                      <div class="unfold-step-desc">Technical PDFs, code repositories, and documentation are semantically chunked with sliding window overlap.</div>
+                    </div>
+                    <div class="unfold-step">
+                      <div class="unfold-step-num">02. DENSE VECTOR EMBEDDINGS</div>
+                      <div class="unfold-step-desc">SentenceTransformers encodes text into dense 768-dimensional latent vectors indexed in memory.</div>
+                    </div>
+                    <div class="unfold-step">
+                      <div class="unfold-step-num">03. COSINE SEMANTIC RETRIEVAL</div>
+                      <div class="unfold-step-desc">Queries are vectorized in real time; top-k relevant documentation chunks are retrieved with cosine similarity scoring.</div>
+                    </div>
+                    <div class="unfold-step">
+                      <div class="unfold-step-num">04. QWEN 2.5 CODER 7B SYNTHESIS</div>
+                      <div class="unfold-step-desc">Augmented context is injected into Qwen 2.5 Coder 7B, generating syntax-verified code with source citations.</div>
+                    </div>
+                    <div class="unfold-step">
+                      <div class="unfold-step-num">05. REAL-TIME TOKEN STREAMING</div>
+                      <div class="unfold-step-desc">Flask server-sent events stream tokens progressively with rendered markdown and zero hallucinations.</div>
+                    </div>
+                  </div>
+
+                  <div class="unfold-actions">
+                    <a href="https://github.com/praveen-79" target="_blank" rel="noopener noreferrer" class="btn primary btn-sm">
+                      GitHub Repository ↗
+                    </a>
+                    <button class="btn glass btn-sm" onclick="launchInTerminal('rag')">
+                      Test in AI Terminal ⌨
+                    </button>
+                    <button class="btn glass btn-sm open-blueprint-btn" data-project="rag-chatbot">
+                      Full Modal Blueprint 🔍
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 2: EEG-to-Text Conversion System -->
+          <div class="project-card tilt-card" data-category="neuro">
+            <div>
+              <div class="project-top">
+                <span class="project-badge">NEURAL PIPELINE // BCI</span>
+                <div class="project-links-top">
+                  <a href="https://github.com/praveen-79" target="_blank" rel="noopener noreferrer" class="project-icon-link">
+                    GitHub ↗
+                  </a>
+                </div>
+              </div>
+
+              <h3 class="project-title">EEG-to-Text Conversion System</h3>
+              <div class="project-category">Python • PyTorch / TensorFlow • CNN-BiLSTM • Deep Learning</div>
+
+              <ul class="project-bullets">
+                <li>Built an end-to-end deep learning pipeline to convert raw EEG neural signals into textual output.</li>
+                <li>Designed a hybrid <strong>CNN-BiLSTM architecture</strong> to extract spatial features from scalp channels and temporal sequence patterns over time.</li>
+                <li>Preprocessed EEG data through bandpass filtering, normalization, and temporal segmentation to improve model performance.</li>
+                <li>Applied sequence modeling techniques to map neural signal patterns to textual predictions.</li>
+                <li>Evaluated model performance using BLEU score and loss-curve analysis.</li>
+              </ul>
+
+              <div class="project-tags">
+                <span class="project-tag">PyTorch</span>
+                <span class="project-tag">TensorFlow</span>
+                <span class="project-tag">CNN-BiLSTM</span>
+                <span class="project-tag">Signal Filtering</span>
+                <span class="project-tag">BLEU Metric</span>
+              </div>
+
+              <!-- Tap to Unfold Structure Trigger -->
+              <div class="card-unfold-trigger">
+                <span class="expand-text">Tap to Unfold System Architecture</span>
+                <span class="expand-icon">+</span>
+              </div>
+
+              <!-- Unfolded Architecture Drawer -->
+              <div class="card-unfolded-drawer">
+                <div class="unfold-inner">
+                  <div class="unfold-subtitle">Architecture Pipeline &amp; Data Flow</div>
+                  <div class="unfold-step-list">
+                    <div class="unfold-step">
+                      <div class="unfold-step-num">01. RAW NEURAL ACQUISITION</div>
+                      <div class="unfold-step-desc">Multi-channel raw microvolt EEG signal streams are ingested across spatial electrode montages.</div>
+                    </div>
+                    <div class="unfold-step">
+                      <div class="unfold-step-num">02. FILTERING &amp; ARTIFACT REMOVAL</div>
+                      <div class="unfold-step-desc">Bandpass filtering (0.5Hz–50Hz), baseline drift correction, and ocular artifact attenuation.</div>
+                    </div>
+                    <div class="unfold-step">
+                      <div class="unfold-step-num">03. SPATIAL CNN TOPOLOGY</div>
+                      <div class="unfold-step-desc">Convolutional layers isolate spatial electrode interactions and local neural firing clusters.</div>
+                    </div>
+                    <div class="unfold-step">
+                      <div class="unfold-step-num">04. TEMPORAL BiLSTM ENCODER</div>
+                      <div class="unfold-step-desc">Bidirectional LSTM units process temporal dependencies forward and backward across time steps.</div>
+                    </div>
+                    <div class="unfold-step">
+                      <div class="unfold-step-num">05. SEQUENCE DECODER &amp; BLEU</div>
+                      <div class="unfold-step-desc">Beam search translates continuous neural states into discrete textual words evaluated by BLEU metrics.</div>
+                    </div>
+                  </div>
+
+                  <div class="unfold-actions">
+                    <a href="https://github.com/praveen-79" target="_blank" rel="noopener noreferrer" class="btn primary btn-sm">
+                      GitHub Repository ↗
+                    </a>
+                    <button class="btn glass btn-sm" onclick="launchInTerminal('eeg')">
+                      Query Terminal ⌨
+                    </button>
+                    <button class="btn glass btn-sm open-blueprint-btn" data-project="eeg-text">
+                      Full Blueprint 🔍
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 3: PulseChat -->
+          <div class="project-card tilt-card" data-category="realtime">
+            <div>
+              <div class="project-top">
+                <span class="project-badge">CONCURRENCY // NETWORKING</span>
+                <div class="project-links-top">
+                  <a href="https://github.com/praveen-79" target="_blank" rel="noopener noreferrer" class="project-icon-link">
+                    GitHub ↗
+                  </a>
+                </div>
+              </div>
+
+              <h3 class="project-title">PulseChat</h3>
+              <div class="project-category">Python • Tkinter • Socket Programming • SQLite • Threading</div>
+
+              <ul class="project-bullets">
+                <li>Developed a real-time multi-user chat application using Python socket programming and a client-server architecture.</li>
+                <li>Implemented concurrent client handling using Python <strong>threading</strong> for simultaneous user connections.</li>
+                <li>Built login and signup interfaces with user authentication and SQLite-based credential management.</li>
+                <li>Developed a graphical chat interface with online-user tracking and real-time message broadcasting.</li>
+                <li>Integrated separate server, client, database, and GUI components for modular application development.</li>
+              </ul>
+
+              <div class="project-tags">
+                <span class="project-tag">Socket Programming</span>
+                <span class="project-tag">Python Threading</span>
+                <span class="project-tag">Client-Server</span>
+                <span class="project-tag">SQLite Auth</span>
+                <span class="project-tag">Tkinter GUI</span>
+              </div>
+
+              <!-- Tap to Unfold Structure Trigger -->
+              <div class="card-unfold-trigger">
+                <span class="expand-text">Tap to Unfold System Architecture</span>
+                <span class="expand-icon">+</span>
+              </div>
+
+              <!-- Unfolded Architecture Drawer -->
+              <div class="card-unfolded-drawer">
+                <div class="unfold-inner">
+                  <div class="unfold-subtitle">Architecture Pipeline &amp; Data Flow</div>
+                  <div class="unfold-step-list">
+                    <div class="unfold-step">
+                      <div class="unfold-step-num">01. TCP SOCKET DAEMON</div>
+                      <div class="unfold-step-desc">Server binds to TCP port, listens for incoming connection requests, and dispatches socket handles.</div>
+                    </div>
+                    <div class="unfold-step">
+                      <div class="unfold-step-num">02. WORKER THREAD POOL</div>
+                      <div class="unfold-step-desc">Each connected client runs on an isolated daemon thread, preventing blocking I/O across the network.</div>
+                    </div>
+                    <div class="unfold-step">
+                      <div class="unfold-step-num">03. SQLITE AUTHENTICATION</div>
+                      <div class="unfold-step-desc">Client credentials, active status, and timestamps are securely verified against SQLite relational store.</div>
+                    </div>
+                    <div class="unfold-step">
+                      <div class="unfold-step-num">04. BROADCAST PROTOCOL</div>
+                      <div class="unfold-step-desc">Serialized byte payloads with message length headers ensure reliable multi-client synchronization.</div>
+                    </div>
+                  </div>
+
+                  <div class="unfold-actions">
+                    <a href="https://github.com/praveen-79" target="_blank" rel="noopener noreferrer" class="btn primary btn-sm">
+                      GitHub Repository ↗
+                    </a>
+                    <button class="btn glass btn-sm" onclick="launchInTerminal('pulsechat')">
+                      Query Terminal ⌨
+                    </button>
+                    <button class="btn glass btn-sm open-blueprint-btn" data-project="pulsechat">
+                      Full Blueprint 🔍
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 4: Personal Portfolio Website -->
+          <div class="project-card tilt-card" data-category="realtime">
+            <div>
+              <div class="project-top">
+                <span class="project-badge">MINIMALIST TECH // 3D CANVAS</span>
+                <div class="project-links-top">
+                  <a href="https://github.com/praveen-79" target="_blank" rel="noopener noreferrer" class="project-icon-link">
+                    GitHub ↗
+                  </a>
+                </div>
+              </div>
+
+              <h3 class="project-title">Personal Portfolio Website</h3>
+              <div class="project-category">HTML5 • CSS3 • Modern JavaScript • Three.js • Charcoal Minimalist</div>
+
+              <ul class="project-bullets">
+                <li>Designed and developed a responsive personal portfolio website to showcase projects, technical skills, and profile.</li>
+                <li>Built using semantic HTML, custom CSS, and JavaScript for an interactive user experience with subtle 3D response to cursor movement.</li>
+                <li>Integrated tactile card unfolding structure to reveal full system architecture on tap.</li>
+                <li>Embedded interactive RAG terminal sandbox directly in-browser with token streaming.</li>
+                <li>Maintained complete portfolio source code and assets in a public GitHub repository.</li>
+              </ul>
+
+              <div class="project-tags">
+                <span class="project-tag">Three.js Ambient</span>
+                <span class="project-tag">Unfolding Cards</span>
+                <span class="project-tag">RAG Terminal</span>
+                <span class="project-tag">Charcoal Theme</span>
+                <span class="project-tag">Responsive UI</span>
+              </div>
+
+              <!-- Tap to Unfold Structure Trigger -->
+              <div class="card-unfold-trigger">
+                <span class="expand-text">Tap to Unfold System Architecture</span>
+                <span class="expand-icon">+</span>
+              </div>
+
+              <!-- Unfolded Architecture Drawer -->
+              <div class="card-unfolded-drawer">
+                <div class="unfold-inner">
+                  <div class="unfold-subtitle">Architecture Pipeline &amp; Data Flow</div>
+                  <div class="unfold-step-list">
+                    <div class="unfold-step">
+                      <div class="unfold-step-num">01. CHARCOAL AMBIENT CANVAS</div>
+                      <div class="unfold-step-desc">Lightweight Three.js WebGL scene with micro-stardust and smooth camera parallax physics.</div>
+                    </div>
+                    <div class="unfold-step">
+                      <div class="unfold-step-num">02. 3D TACTILE CARD PHYSICS</div>
+                      <div class="unfold-step-desc">Cursor offset coordinates drive perspective tilt angles and dynamic brushed-silver specular highlights.</div>
+                    </div>
+                    <div class="unfold-step">
+                      <div class="unfold-step-num">03. UNFOLDING DRAWER ENGINE</div>
+                      <div class="unfold-step-desc">Single-tap card state toggling smoothly expands in-depth architecture without popup blocking.</div>
+                    </div>
+                    <div class="unfold-step">
+                      <div class="unfold-step-num">04. EMBEDDED RAG CONSOLE</div>
+                      <div class="unfold-step-desc">In-browser simulated Qwen 2.5 Coder agent with realistic token streaming and prompt chips.</div>
+                    </div>
+                  </div>
+
+                  <div class="unfold-actions">
+                    <a href="https://github.com/praveen-79" target="_blank" rel="noopener noreferrer" class="btn primary btn-sm">
+                      Source Code ↗
+                    </a>
+                    <button class="btn glass btn-sm" onclick="launchInTerminal('about')">
+                      About Agent ⌨
+                    </button>
+                    <button class="btn glass btn-sm open-blueprint-btn" data-project="portfolio-3d">
+                      Full Blueprint 🔍
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 04. AI TERMINAL & RAG SANDBOX ================= -->
+    <section id="terminal" class="section">
+      <div class="container">
+        
+        <span class="section-tag">// 04. AI AGENT TERMINAL &amp; RAG SANDBOX</span>
+        <h2 class="section-title">Interactive <span>AI Agent</span> Terminal</h2>
+        <p class="section-desc">
+          Directly simulates Praveen's <strong>Qwen 2.5 Coder &amp; RAG Chatbot</strong>. Type commands or click prompt chips to query my experience, models, and background in real time.
+        </p>
+
+        <!-- Cyber Terminal Box -->
+        <div class="terminal-window">
+          
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <div class="terminal-title">PRAVEEN_AI_AGENT // QWEN_2.5_CODER_RAG_EMULATOR</div>
+            <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent-emerald);">● READY</div>
+          </div>
+
+          <div class="terminal-body" id="terminal-output">
+            <!-- Dynamic command and response lines rendered here -->
+          </div>
+
+          <form id="terminal-form" class="terminal-input-bar">
+            <span class="terminal-input-prompt">pk-terminal &gt;</span>
+            <input 
+              type="text" 
+              id="terminal-input" 
+              class="terminal-input" 
+              placeholder="Type 'help', 'rag', 'eeg', 'skills', 'hire' or ask any question..." 
+              autocomplete="off"
+              spellcheck="false"
+            >
+          </form>
+
+        </div>
+
+        <!-- Quick Prompt Chips -->
+        <div class="terminal-chips" id="terminal-chips">
+          <button class="chip-btn" data-query="rag">⚡ Explain RAG Chatbot Architecture</button>
+          <button class="chip-btn" data-query="eeg">🧠 How does EEG-to-Text CNN-BiLSTM work?</button>
+          <button class="chip-btn" data-query="pulsechat">💬 Tell me about PulseChat</button>
+          <button class="chip-btn" data-query="skills">🛠️ Praveen's Technical Stack</button>
+          <button class="chip-btn" data-query="hire">💼 Why Hire Praveen Kumar?</button>
+          <button class="chip-btn" data-query="matrix">🟢 Trigger Matrix Stream</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 05. EDUCATION & COURSEWORK ================= -->
     <section id="education" class="section">
-
-      <div class="section-title reveal">
-
-        <div>
-
-          <small>04 / EDUCATION</small>
-
-          <h2>
-            My <span>journey.</span>
-          </h2>
-
-        </div>
-
-        <p>
-          Learning, experimenting and building.
+      <div class="container">
+        
+        <span class="section-tag">// 05. ACADEMIC FOUNDATION</span>
+        <h2 class="section-title">Education &amp; <span>Certifications</span></h2>
+        <p class="section-desc">
+          Formal engineering degree at Chaitanya Bharathi Institute of Technology and specialized certifications in AI and Machine Learning.
         </p>
 
-      </div>
+        <div class="education-grid">
+          
+          <!-- Degree Card -->
+          <div class="degree-card tilt-card">
+            <div class="degree-year">NOV 2022 – AUG 2026 • COMPLETED</div>
+            <h3 class="degree-title">B.Tech in Artificial Intelligence &amp; Machine Learning</h3>
+            <div class="degree-inst">Chaitanya Bharathi Institute of Technology (CBIT)</div>
+            <div class="degree-score">CGPA: 7.11</div>
 
-
-      <div class="education-card glass-card reveal">
-
-        <div class="edu-year">
-          2022 — 2026
-        </div>
-
-        <div class="edu-content">
-
-          <div class="edu-label">
-            B.E. / AI & ML
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+              Completed a comprehensive engineering curriculum specializing in machine learning algorithms, deep neural architectures, linear algebra, probability, data structures, and distributed computer systems.
+            </p>
           </div>
 
-          <h3>
-            Chaitanya Bharathi Institute of Technology
-          </h3>
+          <!-- Relevant Coursework & Certifications -->
+          <div class="coursework-card tilt-card">
+            <h3 style="font-family: var(--font-heading); font-size: 1.35rem; color: #fff; margin-bottom: 6px;">Relevant Coursework &amp; Certifications</h3>
+            <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-dim); margin-bottom: 16px;">VERIFIED INDUSTRY ACCREDITATIONS</div>
 
-          <p>
-            Artificial Intelligence and Machine Learning
-          </p>
+            <div class="course-list">
+              
+              <div class="course-item">
+                <span class="course-icon">🎓</span>
+                <div>
+                  <div class="course-name">AI Foundation and Advanced</div>
+                  <div class="course-issuer">Indian School of Business (ISB)</div>
+                </div>
+              </div>
 
-          <strong>
-            CGPA: 7.11
-          </strong>
+              <div class="course-item">
+                <span class="course-icon">🎓</span>
+                <div>
+                  <div class="course-name">Machine Learning Foundation</div>
+                  <div class="course-issuer">Indian School of Business (ISB)</div>
+                </div>
+              </div>
 
-        </div>
+              <div class="course-item">
+                <span class="course-icon">🎓</span>
+                <div>
+                  <div class="course-name">Machine Learning Professional</div>
+                  <div class="course-issuer">Udemy</div>
+                </div>
+              </div>
 
-        <div class="edu-mark">
-          CBIT
-        </div>
+              <div class="course-item">
+                <span class="course-icon">💻</span>
+                <div>
+                  <div class="course-name">Web Development Specialization</div>
+                  <div class="course-issuer">Internshala</div>
+                </div>
+              </div>
 
-      </div>
-
-
-      <div class="coursework glass-card reveal">
-
-        <div class="mini-label">
-          RELEVANT COURSEWORK
-        </div>
-
-        <div class="course-list">
-
-          <span>
-            Web Development — Internshala
-          </span>
-
-          <span>
-            AI Foundation and Advanced — ISB
-          </span>
-
-          <span>
-            Machine Learning Foundation — ISB
-          </span>
-
-          <span>
-            Machine Learning — Udemy
-          </span>
+            </div>
+          </div>
 
         </div>
 
       </div>
-
     </section>
 
-
-    <!-- ================= CONTACT ================= -->
-
-    <section id="contact" class="section contact-section">
-
-      <div class="contact-box reveal">
-
-        <div class="contact-glow"></div>
-
-        <small>
-          05 / CONTACT
-        </small>
-
-        <h2>
-          Have an idea?<br>
-          <span>Let's build it.</span>
-        </h2>
-
-        <p>
-          I'm open to opportunities, projects and meaningful collaborations.
+    <!-- ================= 06. CONTACT ================= -->
+    <section id="contact" class="section">
+      <div class="container">
+        
+        <span class="section-tag">// 06. TRANSMISSION CHANNELS</span>
+        <h2 class="section-title">Initiate <span>Connection</span></h2>
+        <p class="section-desc">
+          I am actively seeking AI/ML engineering roles, internships, and research collaborations. Send a direct transmission or connect via socials.
         </p>
 
+        <div class="contact-grid">
+          
+          <!-- Channels Left -->
+          <div class="contact-card tilt-card">
+            <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: #fff; margin-bottom: 8px;">Direct Coordinates</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">
+              Click copy buttons for instant clipboard copy or click links to launch directly.
+            </p>
 
-        <!-- EMAIL BUTTON -->
+            <div class="contact-channels">
+              
+              <div class="channel-item">
+                <div class="channel-info">
+                  <span class="channel-icon">✉</span>
+                  <div>
+                    <div class="channel-title">Email Transmission</div>
+                    <div class="channel-val">praveenkumarpidamarthi01@gmail.com</div>
+                  </div>
+                </div>
+                <button class="copy-btn" data-copy="praveenkumarpidamarthi01@gmail.com">Copy</button>
+              </div>
 
-        <a
-          href="mailto:praveenkumarpidamarthi01@gmail.com?subject=Portfolio%20Contact"
-          class="btn primary"
-        >
-          Let's Talk ↗
-        </a>
+              <div class="channel-item">
+                <div class="channel-info">
+                  <span class="channel-icon">📞</span>
+                  <div>
+                    <div class="channel-title">Secure Telephone</div>
+                    <div class="channel-val">+91 8317668826</div>
+                  </div>
+                </div>
+                <button class="copy-btn" data-copy="+918317668826">Copy</button>
+              </div>
 
+              <div class="channel-item">
+                <div class="channel-info">
+                  <span class="channel-icon">§</span>
+                  <div>
+                    <div class="channel-title">Code Repositories</div>
+                    <div class="channel-val">github.com/praveen-79</div>
+                  </div>
+                </div>
+                <a href="https://github.com/praveen-79" target="_blank" rel="noopener noreferrer" class="copy-btn" style="text-decoration:none;">Visit ↗</a>
+              </div>
 
-        <!-- CONTACT DETAILS -->
+              <div class="channel-item">
+                <div class="channel-info">
+                  <span class="channel-icon">in</span>
+                  <div>
+                    <div class="channel-title">Professional Network</div>
+                    <div class="channel-val">linkedin.com/in/praveen-kumar</div>
+                  </div>
+                </div>
+                <a href="https://www.linkedin.com/in/praveen-kumar-pidamarthi-781b52299/" target="_blank" rel="noopener noreferrer" class="copy-btn" style="text-decoration:none;">Visit ↗</a>
+              </div>
 
-        <div class="contact-links">
+              <div class="channel-item">
+                <div class="channel-info">
+                  <span class="channel-icon">📍</span>
+                  <div>
+                    <div class="channel-title">Operating Base</div>
+                    <div class="channel-val">Hyderabad, Telangana, India</div>
+                  </div>
+                </div>
+                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-emerald);">IST (UTC+5:30)</span>
+              </div>
 
-          <a
-            href="mailto:praveenkumarpidamarthi01@gmail.com?subject=Portfolio%20Contact"
-          >
-            praveenkumarpidamarthi01@gmail.com
-          </a>
+              <div class="channel-item">
+                <div class="channel-info">
+                  <span class="channel-icon">📄</span>
+                  <div>
+                    <div class="channel-title">Official Resume (PDF)</div>
+                    <div class="channel-val">Praveen_Kumar_Resume.pdf</div>
+                  </div>
+                </div>
+                <a href="Praveen_Kumar_Resume.pdf" download="Praveen_Kumar_Resume.pdf" target="_blank" rel="noopener noreferrer" class="copy-btn" style="text-decoration:none;">Download ↓</a>
+              </div>
 
-          <a href="tel:8317668826">
-            8317668826
-          </a>
+            </div>
+          </div>
 
-        </div>
+          <!-- Message Transmission Form Right -->
+          <div class="contact-card tilt-card">
+            <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: #fff; margin-bottom: 8px;">Direct Message Dispatch</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px;">
+              Transmits encrypted mail directly to Praveen's primary communication channel.
+            </p>
 
+            <form id="contact-form" class="contact-form">
+              <div class="form-group">
+                <label for="sender-name" class="form-label">Full Name / Organization</label>
+                <input type="text" id="sender-name" class="form-input" placeholder="e.g. Elena Rostova / Google DeepMind" required>
+              </div>
 
-        <!-- SOCIAL BUTTONS -->
+              <div class="form-group">
+                <label for="sender-email" class="form-label">Return Communication Address</label>
+                <input type="email" id="sender-email" class="form-input" placeholder="e.g. elena@domain.com" required>
+              </div>
 
-        <div class="big-socials">
+              <div class="form-group">
+                <label for="sender-message" class="form-label">Mission Brief / Message</label>
+                <textarea id="sender-message" class="form-textarea" placeholder="Describe the AI/ML role, engineering challenge, or project collaboration..." required></textarea>
+              </div>
 
-          <a
-            href="https://github.com/praveen-79"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub <span>↗</span>
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/praveen-kumar-pidamarthi-781b52299/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn <span>↗</span>
-          </a>
+              <button type="submit" class="btn primary" style="width: 100%;">
+                Transmit Message Protocol 🚀
+              </button>
+            </form>
+          </div>
 
         </div>
 
       </div>
-
     </section>
 
   </main>
 
+  <!-- ==========================================================================
+       HOLOGRAPHIC BLUEPRINT MODAL
+       ========================================================================== -->
+  <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close Blueprint">✕</button>
+      <div id="modal-content-body">
+        <!-- Injected dynamically via js/main.js -->
+      </div>
+    </div>
+  </div>
 
-  <!-- ================= FOOTER ================= -->
-
-  <footer>
-
-    <span>
-      © <span id="year"></span>
-      Pidamarthi Praveen Kumar
-    </span>
-
-    <span>
-      Designed & built with HTML, CSS & JavaScript
-    </span>
-
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-text">
+        © 2026 <span>Pidamarthi Praveen Kumar</span> • Architected with Three.js WebGL, Web Audio &amp; Modern CSS.
+      </div>
+      <a href="#home" class="footer-top-btn nav-link">
+        Return to Nexus Top ↑
+      </a>
+    </div>
   </footer>
 
+  <!-- ==========================================================================
+       SCRIPTS: THREE.JS & MODULAR ENGINES
+       ========================================================================== -->
+  <!-- Three.js (Offline local fallback + CDN fail-safe) -->
+  <script src="assets/three.min.js"></script>
+  <script>
+    if (typeof THREE === 'undefined') {
+      document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"><\/script>');
+    }
+  </script>
 
-  <!-- BACK TO TOP -->
-
-  <button
-    id="topBtn"
-    class="top-btn"
-    aria-label="Back to top"
-  >
-    ↑
-  </button>
-
-
-  <script src="script.js"></script>
+  <!-- Application Modules -->
+  <script src="js/audio.js"></script>
+  <script src="js/three-scene.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/main.js"></script>
 
 </body>
 </html>
