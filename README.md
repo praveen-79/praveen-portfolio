@@ -21,7 +21,7 @@ Designed with a matte charcoal aesthetic (`#090a0d`), zero visual clutter, smoot
 - **Minimalist Dark Charcoal Design**: Plain matte slate/charcoal palette (`#090a0d` to `#0d0f14`) with translucent glassmorphic surfaces and high-contrast typography.
 - **Ambient 3D Particle Space**: Clean Three.js WebGL canvas with 1,200 floating particles and smooth mathematical mouse parallax.
 - **Tactile Unfolding Project Cards**: Interactive cards that smoothly expand in 3D perspective to reveal full engineering data flows and architectural blueprints.
-- **Simulated Qwen 2.5 Coder Terminal**: Interactive RAG terminal with custom query suggestions, token streaming, and command-line execution (`rag`, `eeg`, `pulsechat`, `skills`, `matrix`, `help`).
+- **Simulated Qwen 2.5 Coder Terminal**: Interactive RAG terminal with custom query suggestions, token streaming, and command-line execution (`rag`, `eeg`, `deepfake`, `balubeats`, `bookshop`, `pulsechat`, `skills`, `matrix`, `help`).
 - **Interactive Blueprints Modal**: Deep-dive architecture inspection with interactive step-by-step pipeline viewers.
 - **Offline & CDN Resilient**: Bundled local Three.js fallback ensuring zero downtime across network conditions.
 - **100% Responsive**: Tailored for ultra-wide monitors, laptops, tablets, and mobile devices.
@@ -30,21 +30,33 @@ Designed with a matte charcoal aesthetic (`#090a0d`), zero visual clutter, smoot
 
 ## 🛠 Featured Engineering Projects
 
-1. **Praveen Coding Assistant & RAG Chatbot**
-   - **Stack**: Python, Streamlit, LangChain, FAISS, PyMuPDF, HuggingFace Embeddings, Ollama (Qwen 2.5 Coder 1.5B).
-   - **Architecture**: Local retrieval-augmented generation engine with persistent vector indexing, hybrid retrieval, and sub-second context synthesis.
+1. **Praveen Coding Assistant & RAG Chatbot** ([GitHub](https://github.com/praveen-79/praveen-coding-assistant) | [Live Space](https://huggingface.co/spaces/praveenkumarpidamarthi/praveen-coding-assistant))
+   - **Stack**: Python, Flask, Qwen 2.5 Coder 7B, SentenceTransformers (`all-MiniLM-L6-v2`), Cosine Similarity, Marked.js.
+   - **Architecture**: Retrieval-augmented generation engine with PDF vector indexing, cited source pages, and real-time token streaming.
 
-2. **EEG-to-Text Conversion System**
-   - **Stack**: PyTorch, NumPy, SciPy, MNE, Matplotlib, Streamlit.
-   - **Architecture**: CNN-BiLSTM with multi-head self-attention converting raw non-invasive neural electroencephalography signals into decoded phoneme/text sequences.
+2. **EEG-to-Text Conversion System** ([GitHub](https://github.com/praveen-79))
+   - **Stack**: Python, PyTorch, TensorFlow, CNN-BiLSTM, Signal Processing.
+   - **Architecture**: Hybrid spatial-temporal CNN-BiLSTM pipeline converting raw non-invasive EEG neural signals into decoded text sequences evaluated via BLEU metrics.
 
-3. **PulseChat - Real-Time Collaborative Platform**
-   - **Stack**: Node.js, Express.js, Socket.io, React, WebSockets.
-   - **Architecture**: Bidirectional low-latency communication engine with ephemeral state synchronization and dynamic channel routing.
+3. **Deepfake Detection & VeriShare Platform** ([GitHub](https://github.com/praveen-79/DeepFakeDetection) | [Live Demo](https://praveen-79.github.io/DeepFakeDetection/))
+   - **Stack**: Python, TensorFlow, OpenCV, MesoNet, XceptionNet, Vision Transformer (ViT), Scikit-Learn Random Forest, Flask.
+   - **Architecture**: Multi-model forensic ensemble fusing 64-D MesoNet, 128-D XceptionNet, and 128-D ViT features into a 320-D vector to automatically block synthetic media uploads on the VeriShare social platform.
 
-4. **Personal Portfolio Website**
+4. **Balu Beats — 320kbps Music Player & Multi-App Spotify Bridge** ([GitHub](https://github.com/praveen-79/balu-beats) | [Live App](https://praveen-79.github.io/balu-beats/))
+   - **Stack**: JavaScript, HTML5 Audio API, React Native (`expo-av`), Python Server, Progressive Web App (PWA).
+   - **Architecture**: Streams 320kbps tracks, Apple/iTunes charts, Audius indie streams, and 24/7 Live World Radio with time-synced karaoke lyrics and cross-platform Spotify/YouTube Music/Apple Music/JioSaavn deep-linking.
+
+5. **BookVerse — Full-Stack Online Bookshop** ([GitHub](https://github.com/praveen-79/bookshop) | [Live Demo](https://praveen-79.github.io/bookshop/))
+   - **Stack**: Python, Flask, SQLite, JavaScript (jQuery & AJAX), Jinja2, Bootstrap 5, Werkzeug.
+   - **Architecture**: E-commerce platform with Werkzeug authentication, real-time AJAX shopping cart updates, instant live search dropdowns, multi-gateway checkout, and printable itemized order invoices.
+
+6. **PulseChat - Real-Time Multi-User Chat** ([GitHub](https://github.com/praveen-79/pulsechat))
+   - **Stack**: Python, Socket Programming (TCP/IP), Multi-Threading, SQLite, Tkinter GUI.
+   - **Architecture**: Concurrent client-server chat system with isolated worker threads, SQLite credential authentication, and live presence broadcasting.
+
+7. **Personal Portfolio Website** ([GitHub](https://github.com/praveen-79/praveen-portfolio) | [Live Site](https://praveen-79.github.io/praveen-portfolio/))
    - **Stack**: HTML5, CSS3 3D Transforms, Vanilla ES6+, WebGL / Three.js.
-   - **Architecture**: Responsive cyberpunk charcoal interface with interactive matrix terminal and tactile card drawer physics.
+   - **Architecture**: Responsive matte charcoal interface with interactive RAG terminal and tactile 3D unfolding card drawer physics.
 
 ---
 

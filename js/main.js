@@ -224,28 +224,29 @@ function initProjectFilters() {
 }
 
 /**
- * Project Blueprints (Deepfake removed, verified 4 projects)
+ * Project Blueprints (All 7 GitHub & Resume Projects)
  */
 const PROJECT_BLUEPRINTS = {
   'rag-chatbot': {
     title: 'Praveen Coding Asst & RAG Chatbot',
     category: 'Generative AI & LLMs',
     badge: 'Flagship System',
-    tags: ['Python', 'Flask', 'Qwen 2.5 Coder 7B', 'SentenceTransformers', 'RAG', 'Vector Search'],
+    tags: ['Python', 'Flask', 'Qwen 2.5 Coder 7B', 'SentenceTransformers', 'RAG', 'Vector Search', 'Hugging Face Spaces'],
     summary: 'An enterprise-grade coding assistant and document retrieval architecture that allows software engineers to interrogate complex codebases, PDFs, and algorithms with zero hallucinations.',
     architecture: [
       { step: '01. Ingestion', desc: 'PDFs and coding repositories are parsed, chunked with semantic boundaries, and cleaned.' },
-      { step: '02. Vector Embeddings', desc: 'SentenceTransformers encodes text chunks into dense 768-dimensional latent vectors.' },
+      { step: '02. Vector Embeddings', desc: 'SentenceTransformers (all-MiniLM-L6-v2) encodes text chunks into dense latent vectors.' },
       { step: '03. Cosine Indexing', desc: 'Query is embedded on-the-fly; top-k nearest semantic chunks are retrieved via Cosine Similarity.' },
       { step: '04. Qwen 2.5 Coder 7B', desc: 'Context-augmented prompt is fed into Qwen 2.5 Coder 7B with strict citation instructions.' },
-      { step: '05. Real-Time Streaming', desc: 'Output is streamed token-by-token using Flask SSE with highlighted markdown formatting.' }
+      { step: '05. Real-Time Streaming', desc: 'Output is streamed token-by-token using Flask SSE with Marked.js markdown formatting.' }
     ],
     highlights: [
       'Zero-hallucination guarantee via cited source pages and confidence thresholds.',
       'Specialized in Python, SQL, Data Structures, Algorithms, and ML mathematics.',
-      'Low latency inference with client-side chunk caching.'
+      'Deployed live on Hugging Face Spaces with real-time token streaming.'
     ],
-    github: 'https://github.com/praveen-79',
+    github: 'https://github.com/praveen-79/praveen-coding-assistant',
+    liveUrl: 'https://huggingface.co/spaces/praveenkumarpidamarthi/praveen-coding-assistant',
     sandboxCommand: 'rag'
   },
   'eeg-text': {
@@ -269,6 +270,70 @@ const PROJECT_BLUEPRINTS = {
     github: 'https://github.com/praveen-79',
     sandboxCommand: 'eeg'
   },
+  'deepfake': {
+    title: 'Deepfake Detection & VeriShare Platform',
+    category: 'AI Forensics & Computer Vision',
+    badge: 'Multi-Model Vision Pipeline',
+    tags: ['Python', 'TensorFlow', 'OpenCV', 'MesoNet', 'XceptionNet', 'Vision Transformer (ViT)', 'Random Forest', 'Flask'],
+    summary: 'An end-to-end Deepfake Detection Application integrated into a Flask social media platform (VeriShare) that automatically inspects uploaded photos and videos to prevent synthetic deepfake media from being shared.',
+    architecture: [
+      { step: '01. OpenCV Preprocessing', desc: 'Extracts video frames via cv2.VideoCapture, localizes faces with Haar Cascades, and normalizes tensors (256x256 & 224x224).' },
+      { step: '02. MesoNet & XceptionNet', desc: 'Extracts 64-D mesoscopic Laplacian boundary features and 128-D depthwise separable convolutional texture correlations.' },
+      { step: '03. Vision Transformer (ViT)', desc: 'Computes 128-D 16x16 patch embeddings and multi-head self-attention global spatial consistency features.' },
+      { step: '04. 320-D Feature Fusion & RF', desc: 'Concatenates 64-D + 128-D + 128-D vectors into a unified 320-D vector classified by a Random Forest Classifier.' },
+      { step: '05. VeriShare Gatekeeper', desc: 'Flask social platform blocks detected deepfakes with a forensic telemetry report while publishing verified media.' }
+    ],
+    highlights: [
+      'Multi-model ensemble fusing MesoNet (64-D), XceptionNet (128-D), and Vision Transformer (128-D).',
+      'Integrated directly into VeriShare social feed with standalone AI Forensic Analyzer scanner.',
+      'Supports both image (.jpg, .png, .webp) and multi-frame video (.mp4, .avi, .mov, .webm) inspection.'
+    ],
+    github: 'https://github.com/praveen-79/DeepFakeDetection',
+    liveUrl: 'https://praveen-79.github.io/DeepFakeDetection/',
+    sandboxCommand: 'deepfake'
+  },
+  'balu-beats': {
+    title: 'Balu Beats — 320kbps Music Player & Spotify Bridge',
+    category: 'Audio Streaming, PWA & Mobile App',
+    badge: 'Cross-Platform Media',
+    tags: ['JavaScript', 'HTML5 Audio API', 'React Native (Expo)', 'Python Server', 'Spotify Bridge', 'PWA'],
+    summary: 'A zero-setup mobile and web music player app streaming full-length 320kbps tracks, Apple/iTunes global charts, Audius indie/EDM streams, 24/7 Live World Radio, and time-synced karaoke lyrics with multi-app deep-linking.',
+    architecture: [
+      { step: '01. Multi-Source Audio Engine', desc: 'Aggregates 320kbps full-length streams, Apple/iTunes official charts, Audius APIs, and 24/7 live radio.' },
+      { step: '02. Synced Karaoke Lyrics', desc: 'Parses time-coded lyrics and synchronizes scrolling vocal lines with real-time playback timestamps.' },
+      { step: '03. Multi-App Bridge', desc: 'Connects tracks directly to Spotify, YouTube Music, Apple Music, and JioSaavn.' },
+      { step: '04. PWA & React Native Expo', desc: 'Runs as a single-file shareable HTML app, Wi-Fi installable PWA, or native Android/iOS app via expo-av.' }
+    ],
+    highlights: [
+      'Zero API key setup required; works immediately on desktop and mobile browsers.',
+      'Includes native React Native (Expo) mobile application for Android & iOS APK builds.',
+      'Features 24/7 Live World Radio and real-time time-synced karaoke lyrics.'
+    ],
+    github: 'https://github.com/praveen-79/balu-beats',
+    liveUrl: 'https://praveen-79.github.io/balu-beats/',
+    sandboxCommand: 'balubeats'
+  },
+  'bookshop': {
+    title: 'BookVerse — Full-Stack Online Bookshop',
+    category: 'Full-Stack Web & E-Commerce',
+    badge: 'Full-Stack Application',
+    tags: ['Python', 'Flask', 'SQLite', 'JavaScript', 'jQuery & AJAX', 'Jinja2', 'Bootstrap 5', 'Werkzeug'],
+    summary: 'A full-stack Online Bookshop Application built with Python, Flask, Jinja2, Bootstrap 5, JavaScript (jQuery & AJAX), and SQLite with real-time cart synchronization and live catalog search.',
+    architecture: [
+      { step: '01. Auth & Profile Layer', desc: 'Werkzeug password hashing, Flask session management, and user profile/shipping dashboard.' },
+      { step: '02. Live AJAX Search', desc: 'Real-time /api/search endpoint with instant dropdown suggestions by title, author, category, and ISBN.' },
+      { step: '03. Dynamic AJAX Cart', desc: 'Asynchronous /api/cart/* routes update item quantities, subtotals, tax, and navbar badge counts live.' },
+      { step: '04. Checkout & Invoices', desc: 'Complete checkout workflow (Card, UPI, NetBanking, COD) with order history and printable itemized invoices.' }
+    ],
+    highlights: [
+      'Zero page reloads for shopping cart operations and instant catalog filtering via AJAX.',
+      'Pre-seeded relational SQLite database with complete user, cart, book, and order schemas.',
+      'Responsive Bootstrap 5 interface with printable order receipts.'
+    ],
+    github: 'https://github.com/praveen-79/bookshop',
+    liveUrl: 'https://praveen-79.github.io/bookshop/',
+    sandboxCommand: 'bookshop'
+  },
   'pulsechat': {
     title: 'PulseChat - High-Concurrency Chat Protocol',
     category: 'Real-Time Systems & Sockets',
@@ -287,7 +352,7 @@ const PROJECT_BLUEPRINTS = {
       'Robust graceful disconnection and auto-cleanup handling.',
       'Modular client, server, GUI, and database layer separation.'
     ],
-    github: 'https://github.com/praveen-79',
+    github: 'https://github.com/praveen-79/pulsechat',
     sandboxCommand: 'pulsechat'
   },
   'portfolio-3d': {
@@ -306,7 +371,8 @@ const PROJECT_BLUEPRINTS = {
       'Smooth 60 FPS performance without heavy external libraries.',
       'Directly deployable to GitHub Pages.'
     ],
-    github: 'https://github.com/praveen-79',
+    github: 'https://github.com/praveen-79/praveen-portfolio',
+    liveUrl: 'https://praveen-79.github.io/praveen-portfolio/',
     sandboxCommand: 'about'
   }
 };
@@ -356,7 +422,12 @@ function initProjectModals() {
         </div>
 
         <div class="blueprint-actions">
-          <a href="${data.github}" target="_blank" rel="noopener noreferrer" class="btn primary">
+          ${data.liveUrl ? `
+            <a href="${data.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn primary">
+              Launch Live Demo ↗
+            </a>
+          ` : ''}
+          <a href="${data.github}" target="_blank" rel="noopener noreferrer" class="btn ${data.liveUrl ? 'glass' : 'primary'}">
             Explore GitHub Repository ↗
           </a>
           <button class="btn glass" onclick="launchInTerminal('${data.sandboxCommand}')">

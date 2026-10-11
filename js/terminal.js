@@ -19,13 +19,13 @@ class CyberTerminal {
     this.knowledge = {
       'rag': {
         title: 'Praveen Coding Asst & RAG Chatbot Architecture',
-        citation: 'Source: Resume_2026.pdf (Section: Projects - P.1) | LLM: Qwen 2.5 Coder 7B',
+        citation: 'Source: github.com/praveen-79/praveen-coding-assistant | LLM: Qwen 2.5 Coder 7B',
         text: `The Praveen Coding Assistant is an end-to-end Generative AI pipeline designed for software engineering and technical explanation:
 • Underlying LLM: Integrated Alibaba Cloud's Qwen 2.5 Coder 7B for superior code reasoning, syntax validation, and algorithmic breakdown.
-• Vector Embeddings: Utilized SentenceTransformers to compute high-density dense vector embeddings for indexed documents and PDFs.
+• Vector Embeddings: Utilized SentenceTransformers (all-MiniLM-L6-v2) to compute dense vector embeddings for indexed documents and PDFs.
 • Retrieval Engine: Cosine similarity vector search retrieves the top-k most semantically relevant technical documentation chunks.
 • Citation Grounding: Real-time source page citation prevents hallucinations by tying every code answer to verified source pages.
-• Full-Stack Interface: Built with Flask, HTML/CSS/JS, with real-time SSE (Server-Sent Events) token streaming and Markdown syntax highlighting.`
+• Full-Stack Interface: Built with Flask, HTML/CSS/JS, and Marked.js with real-time token streaming, deployed live on Hugging Face Spaces.`
       },
       'eeg': {
         title: 'EEG-to-Text Conversion Deep Learning System',
@@ -36,9 +36,36 @@ class CyberTerminal {
 • Sequence Modeling: Translates continuous neural embeddings into discrete textual token sequences using sequence-to-sequence beam search.
 • Evaluation: Rigorously benchmarked with BLEU scores (bilingual evaluation understudy) and loss convergence analysis.`
       },
+      'deepfake': {
+        title: 'Deepfake Detection & VeriShare Social Platform',
+        citation: 'Source: github.com/praveen-79/DeepFakeDetection | Stack: TensorFlow, OpenCV, ViT, Flask',
+        text: `An end-to-end Deepfake Detection Application integrated into a Flask social media platform (VeriShare):
+• Preprocessing: Converts uploaded videos (.mp4, .avi, .mov, .webm) into frames via OpenCV (cv2.VideoCapture) and localizes faces using Haar Cascades.
+• Multi-Layer Feature Extraction: Combines MesoNet (64-D mesoscopic features), XceptionNet (128-D depthwise separable textures), and Vision Transformer / ViT (128-D 16x16 patch self-attention).
+• Feature Fusion & Classification: Concatenates features into a unified 320-D vector classified by a Scikit-Learn Random Forest Classifier (Real vs. Fake).
+• VeriShare Gatekeeper: Automatically inspects uploaded media before publishing, blocking synthetic deepfakes with a detailed forensic telemetry report.`
+      },
+      'balubeats': {
+        title: 'Balu Beats — 320kbps Music Player & Multi-App Spotify Bridge',
+        citation: 'Source: github.com/praveen-79/balu-beats | Live: praveen-79.github.io/balu-beats',
+        text: `Balu Beats (PulseBeats) is a cross-platform mobile and web music streaming ecosystem:
+• High-Bitrate Streaming: Streams full-length 320kbps tracks, global official charts (Apple/iTunes), Audius indie/EDM streams, and 24/7 Live World Radio.
+• Multi-App Bridge: Connects directly to Spotify, YouTube Music, Apple Music, and JioSaavn via instant deep-linking.
+• Synced Karaoke Lyrics: Real-time LRC timestamp parser synchronizing scrolling vocal lines with audio playback.
+• Cross-Platform Delivery: Available as a single-file shareable HTML web app, LAN Wi-Fi installable PWA, and native Android/iOS app built with React Native & Expo (expo-av).`
+      },
+      'bookshop': {
+        title: 'BookVerse — Full-Stack Online Bookshop Application',
+        citation: 'Source: github.com/praveen-79/bookshop | Stack: Python, Flask, AJAX, jQuery, SQLite',
+        text: `BookVerse is a full-stack e-commerce bookshop application engineered with Python and Flask:
+• Authentication & Profiles: Secure registration, login, Werkzeug password hashing, session management, and user profile/shipping dashboards.
+• Real-Time AJAX Cart: Asynchronous endpoints (/api/cart/add, /api/cart/update, /api/cart/remove) update item quantities, subtotals, tax, and navbar badge counts without page reloads.
+• Instant AJAX Search: Live search bar (/api/search) using JavaScript, jQuery, and AJAX with dropdown suggestions filtering by title, author, category, and ISBN.
+• Order Processing & Invoicing: Full checkout workflow (Credit/Debit Card, UPI, NetBanking, COD) with order history and printable itemized invoices.`
+      },
       'pulsechat': {
         title: 'PulseChat - Real-Time Multi-User Client-Server System',
-        citation: 'Source: Resume_2026.pdf (Section: Projects - P.1) | Tech: Python Sockets & SQLite',
+        citation: 'Source: github.com/praveen-79/pulsechat | Tech: Python Sockets & SQLite',
         text: `PulseChat is a concurrent network application engineered from socket level:
 • Socket Architecture: Built over TCP/IP socket primitives with custom packet serialization for low-latency transmission.
 • Concurrency: Python multi-threading handles simultaneous bidirectional client sockets without blocking.
@@ -47,11 +74,11 @@ class CyberTerminal {
       },
       'skills': {
         title: 'Praveen Kumar - Verified Technical Skills',
-        citation: 'Source: CBIT AI/ML Department & Project Repositories',
+        citation: 'Source: CBIT AI/ML Department & GitHub Repositories',
         text: `Languages: Python (Advanced), SQL, JavaScript, HTML5, CSS3
-AI & GenAI: LLMs, Retrieval-Augmented Generation (RAG), Prompt Engineering, NLP, SentenceTransformers, Vector Embeddings, Cosine Search
-Deep Learning: PyTorch, TensorFlow, Keras, Scikit-learn, CNN, BiLSTM, Sequence Modeling, Computer Vision (OpenCV)
-Frameworks: Flask, React JS, Tkinter, Client-Server Sockets, REST APIs
+AI & GenAI: LLMs (Qwen 2.5 Coder 7B), Retrieval-Augmented Generation (RAG), Prompt Engineering, NLP, SentenceTransformers, Vector Embeddings, Cosine Search
+Deep Learning & CV: PyTorch, TensorFlow, Keras, Vision Transformer (ViT), XceptionNet, MesoNet, CNN-BiLSTM, Random Forest, OpenCV
+Frameworks & Web: Flask, React JS, React Native (Expo), jQuery & AJAX, Bootstrap 5, Tkinter, Client-Server Sockets, REST APIs
 Databases: SQLite, SQL, Relational Schema Design
 Core CS: Data Structures & Algorithms, OOP, Computer Networks, Operating Systems`
       },
@@ -61,9 +88,9 @@ Core CS: Data Structures & Algorithms, OOP, Computer Networks, Operating Systems
         text: `Top reasons to recruit Praveen Kumar for your AI/ML or Software Engineering team:
 1. Strong Theoretical Foundation: B.Tech in AI & ML from Chaitanya Bharathi Institute of Technology (CGPA: 7.11).
 2. Practical Generative AI Expertise: Hands-on experience with modern LLMs (Qwen 2.5 Coder), vector search, and RAG pipelines.
-3. Complex Neural Modeling: Proven ability to build hybrid neural networks (CNN-BiLSTM) for hard domains like brainwave signal processing.
-4. Full-Stack Delivery: Not just a model trainer — builds the APIs (Flask), databases (SQLite), and interactive responsive web frontends.
-5. High Curiosity & Adaptability: Constantly exploring next-generation AI architectures, 3D interfaces, and edge deployments.`
+3. Complex Neural & Vision Modeling: Proven ability to build hybrid neural networks (CNN-BiLSTM for EEG, MesoNet+XceptionNet+ViT for Deepfake forensics).
+4. Full-Stack & Mobile Delivery: Builds complete products — Flask APIs, AJAX/jQuery e-commerce, React Native (Expo) apps, and 3D web frontends.
+5. High Curiosity & Adaptability: Constantly shipping real-world AI systems and interactive applications.`
       },
       'contact': {
         title: 'Contact Transmission Channels',
@@ -163,9 +190,12 @@ Type "help" to see available commands or click quick prompts below.`);
 • about          : Overview of Praveen Kumar
 • rag            : Deep dive into RAG Chatbot & Qwen 2.5 Coder
 • eeg            : Deep dive into EEG-to-Text CNN-BiLSTM system
+• deepfake       : Deep dive into Deepfake Detection & VeriShare (ViT + MesoNet)
+• balubeats      : Details on Balu Beats 320kbps Player & Spotify Bridge
+• bookshop       : Details on BookVerse Full-Stack Online Bookshop
 • pulsechat      : Details on multi-user socket application
 • skills         : Full list of AI, ML, Web & Core CS skills
-• projects       : Summary of all major portfolio projects
+• projects       : Summary of all 7 portfolio projects
 • education      : CBIT degree, CGPA, and coursework
 • hire           : Why Praveen is an exceptional hire
 • contact        : Direct phone, email, and social handles
@@ -181,21 +211,24 @@ Type "help" to see available commands or click quick prompts below.`);
     }
 
     if (cmd === 'projects') {
-      const projText = `Praveen Kumar's Projects Roster:
+      const projText = `Praveen Kumar's Projects Roster (7 Systems):
 1. Praveen Coding Asst & RAG Chatbot [Qwen 2.5 Coder 7B, SentenceTransformers, RAG, Flask]
 2. EEG-to-Text Conversion System [PyTorch, CNN-BiLSTM, Brain-Computer Interface]
-3. PulseChat [Python Sockets, Multi-threading, SQLite, Tkinter]
-4. Personal Portfolio Website [Three.js, Minimalist Responsive Architecture]
+3. Deepfake Detection & VeriShare Platform [TensorFlow, MesoNet, XceptionNet, ViT, Random Forest, Flask]
+4. Balu Beats — 320kbps Music Player & Spotify Bridge [JS, HTML5 Audio, React Native Expo, PWA]
+5. BookVerse — Online Bookshop Application [Python, Flask, jQuery, AJAX, Bootstrap 5, SQLite]
+6. PulseChat [Python Sockets, Multi-threading, SQLite, Tkinter]
+7. Personal Portfolio Website [Three.js, Minimalist Charcoal 3D Architecture]
 
-Type any project name (e.g. "rag" or "eeg") for technical architecture deep dives.`;
-      this.streamOutput('PROJECTS DIRECTORY', 'Source: Portfolio Database', projText);
+Type any project keyword (e.g. "rag", "eeg", "deepfake", "balubeats", "bookshop", "pulsechat") for technical deep dives.`;
+      this.streamOutput('PROJECTS DIRECTORY', 'Source: GitHub & Portfolio Database', projText);
       return;
     }
 
     if (cmd === 'about') {
       const aboutText = `Pidamarthi Praveen Kumar is an Artificial Intelligence and Machine Learning engineer who completed his B.Tech in Artificial Intelligence and Machine Learning at Chaitanya Bharathi Institute of Technology (CBIT, 2022–2026).
 Passionate about engineering real-world intelligent systems that bridge cutting-edge deep learning research with robust, scalable web architectures.
-Key focuses include Generative AI, Retrieval-Augmented Generation (RAG), Neural Sequence Modeling, and high-concurrency client-server systems.`;
+Key focuses include Generative AI, Retrieval-Augmented Generation (RAG), Computer Vision Forensics, Neural Sequence Modeling, and full-stack web & mobile applications.`;
       this.streamOutput('AGENT BIOGRAPHY', 'Source: CBIT AIML Profile', aboutText);
       return;
     }
@@ -223,6 +256,12 @@ Relevant Coursework & Certifications:
       matchedKey = 'rag';
     } else if (cmd.includes('eeg') || cmd.includes('brain') || cmd.includes('bilstm') || cmd.includes('neural')) {
       matchedKey = 'eeg';
+    } else if (cmd.includes('deepfake') || cmd.includes('verishare') || cmd.includes('mesonet') || cmd.includes('xception') || cmd.includes('vit')) {
+      matchedKey = 'deepfake';
+    } else if (cmd.includes('balu') || cmd.includes('beat') || cmd.includes('music') || cmd.includes('spotify') || cmd.includes('radio')) {
+      matchedKey = 'balubeats';
+    } else if (cmd.includes('book') || cmd.includes('shop') || cmd.includes('ecommerce') || cmd.includes('ajax')) {
+      matchedKey = 'bookshop';
     } else if (cmd.includes('pulse') || cmd.includes('chat') || cmd.includes('socket')) {
       matchedKey = 'pulsechat';
     } else if (cmd.includes('skill') || cmd.includes('tech') || cmd.includes('stack') || cmd.includes('language')) {
@@ -239,8 +278,8 @@ Relevant Coursework & Certifications:
     } else {
       // Natural fallback matching
       const defaultAnswer = `I retrieved relevant context for "${rawCmd}".
-Praveen specializes in AI, Generative AI (LLMs/RAG), Deep Learning (CNN-BiLSTM), and Full-Stack Engineering (Python, Flask, JavaScript).
-To see specifics, try running: "rag", "eeg", "skills", "projects", or "contact".`;
+Praveen specializes in AI, Generative AI (LLMs/RAG), Deep Learning (CNN-BiLSTM, Vision Transformers), and Full-Stack Engineering (Python, Flask, JavaScript, React Native).
+To see specifics, try running: "rag", "eeg", "deepfake", "balubeats", "bookshop", "skills", "projects", or "contact".`;
       this.streamOutput('QUERY RESPONSE', 'Semantic Inference (Qwen RAG Match)', defaultAnswer);
     }
   }
